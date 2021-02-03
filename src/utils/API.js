@@ -1,4 +1,4 @@
-const DOMAIN = 'http://localhost:1337/'
+const DOMAIN = 'https://backend-inmovalls.herokuapp.com/'
 
 //API characteristics
 const API = {

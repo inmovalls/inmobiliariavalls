@@ -1,4 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Cambay&display=swap");
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #9d8860;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -358,16 +399,15 @@ footer {
   margin: 10px;
 }
 .Info-page .Info-content {
-  max-width: 40vw;
   min-width: 300px;
   margin: 1.2rem;
   padding: 1.2rem;
   padding-top: 0;
-  order: 1;
 }
 @media (min-width: 650px) {
   .Info-page .Info-content {
-    order: 0;
+    width: 50vw;
+    min-width: 40rem;
   }
 }
 
@@ -378,7 +418,7 @@ footer {
   align-items: center;
 }
 .Info-image-contact .Contact-container {
-  order: -1;
+  margin-bottom: 20px;
 }
 
 .Home-filter-container {
@@ -520,10 +560,11 @@ footer {
   margin: 30px;
 }
 .Contact-container .Contact-container-content {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .Contact-container .Contact-container-content a:hover {
   text-decoration: underline;
