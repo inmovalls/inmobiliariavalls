@@ -118,9 +118,9 @@ const State = async () => {
                     <p><b>Características:</b></p>
                     <p>${lista_caracteristicas}</p>
                 </div>
-                ${ContactBox()}
+                ${await ContactBox()}
             </div>
-            ${Map()}
+            ${await Map()}
         </div>
     `;
     

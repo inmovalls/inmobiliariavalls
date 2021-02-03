@@ -1,7 +1,7 @@
 const Header = () => {
     const view = `
     <figure class="Footer-logo">
-        <img src="https://i.imgur.com/lBilRnm.png" alt="Valls Logo">
+        <img src="https://i.imgur.com/amubWlx.png" alt="Valls Logo">
     </figure>
     <div class="Footer-info">
         <div class="Footer-info-container">

@@ -399,16 +399,15 @@ footer {
   margin: 10px;
 }
 .Info-page .Info-content {
-  max-width: 40vw;
   min-width: 300px;
   margin: 1.2rem;
   padding: 1.2rem;
   padding-top: 0;
-  order: 1;
 }
 @media (min-width: 650px) {
   .Info-page .Info-content {
-    order: 0;
+    width: 50vw;
+    min-width: 40rem;
   }
 }
 
@@ -419,7 +418,7 @@ footer {
   align-items: center;
 }
 .Info-image-contact .Contact-container {
-  order: -1;
+  margin-bottom: 20px;
 }
 
 .Home-filter-container {
@@ -561,10 +560,11 @@ footer {
   margin: 30px;
 }
 .Contact-container .Contact-container-content {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .Contact-container .Contact-container-content a:hover {
   text-decoration: underline;

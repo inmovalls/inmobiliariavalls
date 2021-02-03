@@ -1,11 +1,25 @@
-const ContactBox = () => {
+import getDepartment from '../utils/getDepartment'
+
+const ContactBox = async () => {
+
+    let pageData = await getDepartment()
+
+    if (!pageData.telefono2) {
+        pageData.telefono2 = ''
+    }
+    if (!pageData.email2) {
+        pageData.email2 = ''
+    }
+
     const view = `
         <div class="Contact-container">
-            <h3>Contáctanos</h3>
+            <h3>Contáctanos</h3><hr>
             <div class="Contact-container-content">
-                <span>+34 610 19 18 17<span><br>
-                <a href='mailto:inmobiliaria@example.com'>inmobiliaria@example.com</a>
-                <p>Siempre a tu disposición</p>
+                <h4>${pageData.nombre_departamento}</h4>
+                <span>${pageData.telefono}</span>
+                <span>${pageData.telefono2}</span>
+                <a href='mailto:${pageData.email}'>${pageData.email}</a>
+                <a href='mailto:${pageData.email2}'>${pageData.email2}</a>
             </div>
         </div>
     `;

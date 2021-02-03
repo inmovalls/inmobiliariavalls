@@ -4,8 +4,9 @@
     @include spacing();
     @include displayColumn();
     & .Contact-container-content {
+        margin-top: 10px;
         @include displayColumn();
-        align-items: flex-start;
+        align-items: center;
         & a:hover {
             text-decoration: underline;
         }

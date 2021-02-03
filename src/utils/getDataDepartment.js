@@ -1,7 +1,7 @@
 import API from './API'
 
-const getDataDepartment = async () => {
-    const apiURL = API.departamentos
+const getDataDepartment = async (id) => {
+    const apiURL = id ? `${API.departamentos}${id}` : API.departamentos
     try {
         const response = await fetch(apiURL)
         const data = await response.json()

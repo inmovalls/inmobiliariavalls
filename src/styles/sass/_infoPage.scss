@@ -17,13 +17,14 @@
         margin: 10px;
     }
     & .Info-content {
-        max-width: 40vw;
         min-width: 300px;
         @include spacing();
         padding-top: 0;
-        order: 1;
+        // order: 1;
         @media (min-width: $changeView) {
-            order: 0;
+            // order: 0;
+            width: 50vw;
+            min-width: 40rem;
         }
     }
 }
@@ -32,6 +33,7 @@
     @include displayColumn();
     align-items: center;
     & .Contact-container {
-        order: -1;
+        // order: -1;
+        margin-bottom: 20px;
     }
 }
