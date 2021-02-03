@@ -1,0 +1,12 @@
+/(home)
+/about
+/inmueble_(hash)
+/venta
+/alquiler
+/traspaso
+/mapa
+/administracion_fincas
+/gestion_alquileres
+/departamento_juridico
+/correduria_seguros
+/contact

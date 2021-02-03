@@ -1,0 +1,14 @@
+.Contact-container {
+    border: 2px solid white;
+    border-radius: 15px;
+    @include spacing();
+    @include displayColumn();
+    & .Contact-container-content {
+        @include displayColumn();
+        align-items: flex-start;
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+    margin: 30px;
+}

@@ -1,0 +1,4 @@
+.Home-items {
+    @include displayCenter();
+    justify-content: space-around;
+}

@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $fontFamily;
+    font-size: $sizeM;
+    color: $colorFont;
+    @include spacing();
+    @include bodyColor();
+    min-height: 100vh;
+    margin-top: $sizeXS;
+    margin-bottom: $sizeXS;
+}
+
+main {
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+ul {
+    list-style-type: none;
+}

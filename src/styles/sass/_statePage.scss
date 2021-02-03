@@ -1,0 +1,94 @@
+.State-page {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include displayColumn();
+    align-items: center;
+
+    & .State-carousel {
+        @include displayCenter();
+        @include spacing();
+        padding: 0;
+        width: 70vw;
+        height: 70vh;
+        & .carousel-pictures {
+            @include displayCenter();
+            width: 70vw;
+            height: 70vh;
+            z-index: -1;
+            & img {
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 10px;
+            }
+        }
+        & button {
+            border-width: 0;
+            background-color: transparent;
+            &:focus {
+                outline: none;
+            }
+
+            position: absolute;
+            background-image: none;
+            width: 30vw;
+            height: 70vh;
+
+            &#button-previous {
+                left: 15vw;
+                @include displayCenter();
+                & .inside-button-previous {
+                    content: "";
+                    display: block;
+                    box-sizing: border-box;
+                    width: 80px;
+                    height: 80px;
+                    transform: rotate(135deg);
+
+                    border-bottom: none;
+                    border-right: none;
+                }
+                &:hover {
+                    background-image: radial-gradient(rgb(13, 13, 38, 0.8), rgb(48, 48, 63, 0.5) 35%, rgb( 48, 48, 63, 0) 53%);
+                    .inside-button-previous {
+                        border-bottom: 15px solid $colorMLighter;
+                        border-right: 15px solid $colorMLighter;
+                }
+            }
+            }
+            &#button-next {
+                right: 15vw;
+                @include displayCenter();
+                & .inside-button-next {
+                    content: "";
+                    display: block;
+                    box-sizing: border-box;
+                    width: 80px;
+                    height: 80px;
+                    transform: rotate(-45deg);
+
+                    border-bottom: none;
+                    border-right: none;
+                }
+                &:hover {
+                    background-image: radial-gradient(rgb(13, 13, 38, 0.8), rgb(48, 48, 63, 0.5) 35%, rgb( 48, 48, 63, 0) 53%);
+                    .inside-button-next {
+                        border-bottom: 15px solid $colorMLighter;
+                        border-right: 15px solid $colorMLighter;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#info2-contact {
+    @include displayCenter();
+    width: 70%;
+    @include spacing();
+}
+#State-page-info-2 {
+    @include spacing();
+}
+#State-page-info-3 {
+    @include spacing($sizeM);
+}

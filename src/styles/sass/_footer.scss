@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    font-size: $sizeM_S;
+    @include displayCenter();
+}
+
+.Footer-logo {
+    @include displayCenter();
+    @include spacing();
+}
+
+.Footer-info {
+
+    @include displayColumn();
+
+    @media (min-width: $changeView) {
+        @include displayCenter();
+        flex-direction: row;
+    }
+    
+    &-container {
+        @include spacing();
+        margin-bottom: 0;
+    }
+}

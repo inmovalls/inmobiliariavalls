@@ -1,0 +1,43 @@
+.StateItem-container {
+    
+    padding: 4px;
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    width: 310px;
+    height: 550px;
+
+    border: 2px solid white;
+    border-radius: 15px;
+
+    @include displayColumn();
+    justify-content: space-around;
+
+    @media (min-width: $changeView) {
+        width: 380px;
+        height: 600px;
+    }
+    
+    &:hover {
+        @include lightContainer();
+    }
+
+    & .StateItem-image {
+        @include spacing(0);
+        & img {
+            border-radius: 10px;
+            max-width: 100%;
+            max-height: 340px; 
+            @media (min-width: $changeView) {
+                max-height: 400px;
+            }
+        }
+    }
+
+    & .StateItem-properties {
+        @include displayColumn();
+    }
+
+
+}
