@@ -7,7 +7,8 @@ const API = {
     tipos: DOMAIN + 'tipo-inmuebles/',
     subtipos: DOMAIN + 'subtipo-inmuebles/',
     caracteristicas: DOMAIN + 'caracteristicas/',
-    zonas: DOMAIN + 'zonas/'
+    zonas: DOMAIN + 'zonas/',
+    departamentos: DOMAIN + 'departamentos/'
 }
 
 export default API

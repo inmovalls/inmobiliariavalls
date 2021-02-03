@@ -65,7 +65,8 @@ const State = async () => {
         },
         zona: {
             nombre_zona
-        }
+        },
+        titulo
     } = state
 
     let lista_caracteristicas = ''
@@ -88,7 +89,7 @@ const State = async () => {
 
     const view = `
         <div class="State-page">
-            <h2>Título: ${definicion}</h2>
+            <h2>Título: ${titulo}</h2>
             ${Carousel(images)}
             <div class="State-page-info" id="State-page-info-1">
                 <p>

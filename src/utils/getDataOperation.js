@@ -7,7 +7,7 @@ const getDataOperation = async () => {
         const data = await response.json()
         return data
     } catch (error) {
-        console.error('Error al conseguir la API de inmuebles', error.message)
+        console.error('Error al conseguir la API de operaciones', error.message)
     }
 }
 
