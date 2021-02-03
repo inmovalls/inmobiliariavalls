@@ -1,0 +1,14 @@
+#map {
+    height: 50vh;
+    width: 80vw;
+    margin-bottom: $sizeM;
+    @media (min-width: $changeView) {
+        height: 50vh;
+        width: 60vw;
+    }
+    & iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}

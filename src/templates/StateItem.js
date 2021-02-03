@@ -10,7 +10,7 @@ const StateItem = async (id) => {
     }
 
     const view = `
-        <a href="/#/inmueble/${state.id}" id="container-${state.id}" class="StateItem-container">
+        <a href="#/inmueble/${state.id}" id="container-${state.id}" class="StateItem-container">
             <h3>${state.definicion}</h3>
             <figure class="StateItem-image">
                 <img src="${state.imagen_url_1}" alt="Inmueble">

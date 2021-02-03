@@ -1,6 +1,6 @@
 import carouselScript from './carouselScript'
 import filterScript from './filterScript';
-import mapScript from './mapScript';
+import initMap from './initMap';
 import showFilterScript from './showFilterScript';
 
 // Select the node that will be observed for mutations
@@ -16,7 +16,7 @@ const callback = function(mutationsList, observer) {
             carouselScript()
             showFilterScript()
             filterScript()
-            mapScript()
+            initMap()
             // console.log('cambio en el child y script ejecutado')
         }
         else if (mutation.type === 'attributes') {

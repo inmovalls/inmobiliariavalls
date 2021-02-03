@@ -1,8 +1,30 @@
-<div class="Contact-container">
-    <h3>Contáctanos</h3>
-    <div class="Contact-container-content">
-        <span>Por teléfono: +34 610 19 18 17<span>
-        <span>Por email: inmobiliaria@example.com<span>
-        <p>Siempre a tu disposición</p>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <style type="text/css">
+      #map {
+        height: 30vh;
+        width: 30vw;
+      }
+
+    </style>
+  <body>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtCWk9pkQ_Ttaxm3_BPhx7ENV_1XaM9Vg&callback=initMap&libraries=&v=weekly"
+    defer
+    ></script>
+    <script>
+        let map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8,
+          });
+        }
+      </script>
+    </head>
+    <div id="map"></div>
+  </body>
+</html>
