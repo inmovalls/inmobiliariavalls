@@ -21,12 +21,13 @@ const StateItem = async (id) => {
                     para <span>${state.operacion.tipo_operacion}</span>
                 </p>
                 <p>
-                    <span>${state.precio}</span>
+                    <span>${state.precio} €</span>
                     &nbsp;
-                    <span>${state.superficie}</span>
+                    <span>${state.superficie} m²</span>
                 </p>
                 <span>${state.habitaciones} habitaciones</span>
                 <span>${state.zona.nombre_zona}</span>
+                <span>Ref: ${state.referencia}</span>
             </div>
         </a>
     `;

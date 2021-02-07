@@ -223,16 +223,23 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 @media (min-width: 650px) {
   .StateItem-container {
-    width: 380px;
-    height: 600px;
+    width: 390px;
+    height: 610px;
   }
 }
 .StateItem-container:hover {
   box-shadow: grey 0.5rem 0.5rem 1rem, grey -0.5rem -0.5rem 1rem, grey -0.5rem 0.5rem 1rem, grey 0.5rem -0.5rem 1rem;
+}
+.StateItem-container h3 {
+  min-height: 6.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .StateItem-container .StateItem-image {
   margin: 0;
@@ -245,7 +252,7 @@ footer {
 }
 @media (min-width: 650px) {
   .StateItem-container .StateItem-image img {
-    max-height: 400px;
+    max-height: 380px;
   }
 }
 .StateItem-container .StateItem-properties {
@@ -459,7 +466,7 @@ footer {
   padding: 0.6rem;
   width: 10rem;
   margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 3px;
 }
 .show-filter-button:focus {
@@ -482,7 +489,8 @@ footer {
   padding: 1.8rem;
   display: none;
 }
-.Home-filter .Filter-container {
+
+.Filter-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -491,12 +499,12 @@ footer {
   margin: 0.6rem;
   padding: 0.6rem;
 }
-.Home-filter .Filter-container .Filter-container-title {
+.Filter-container .Filter-container-title {
   font-weight: bold;
   margin-bottom: 0.6rem;
   align-self: center;
 }
-.Home-filter .Filter-container .Filter-button-container {
+.Filter-container .Filter-button-container {
   display: flex;
   align-items: center;
   margin: 0.6rem;
@@ -514,28 +522,28 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-.Home-filter .Filter-container .Filter-button-container .Filter-button {
+.Filter-container .Filter-button-container .Filter-button {
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-.Home-filter .Filter-container .Filter-button-container .checkmark {
+.Filter-container .Filter-button-container .checkmark {
   background-color: transparent;
   display: none;
 }
-.Home-filter .Filter-container .Filter-button-container .check-checked {
+.Filter-container .Filter-button-container .check-checked {
   display: none;
 }
-.Home-filter .Filter-container .Filter-button-container:hover {
+.Filter-container .Filter-button-container:hover {
   background-color: rgba(255, 255, 255, 0.3);
   font-weight: bold;
 }
-.Home-filter .Filter-container .Filter-button-container input:checked ~ .checkmark {
+.Filter-container .Filter-button-container input:checked ~ .checkmark {
   display: flex;
   margin-right: 10px;
 }
-.Home-filter .Filter-container .Filter-button-container input:checked ~ .checkmark .check-checked {
+.Filter-container .Filter-button-container input:checked ~ .checkmark .check-checked {
   display: block;
   width: 0.8rem;
   height: 2rem;
@@ -547,6 +555,17 @@ footer {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 10;
+}
+.Filter-container#Filter-container-operacion {
+  margin-top: 20px;
+}
+
+#Operacion-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .Contact-container {

@@ -87,42 +87,47 @@ const Filter = async () => {
         toiletsInt[i] = parseInt(toilets[i].replace(/\D/g, ''))
     }
     toiletsInt = toiletsInt.sort(function(a, b){return a-b})
-    
+
     const view = `
-        <div class="Filter-container">
-            <span class="Filter-container-title">Operación: </span>
-            ${makeButtons(operations, "operation")}<br>
+        <div class="Filter-container" id="Filter-container-operacion">
+            <div id="Operacion-buttons-container">
+            <label class="Filter-operation Filter-button-container"><input type="checkbox" checked class="Filter-button Filter-button-operation" id="operation-1"><span class="checkmark"><div class="check-checked"></div></span>Comprar</label>
+            <label class="Filter-operation Filter-button-container"><input type="checkbox" class="Filter-button Filter-button-operation" id="operation-0"><span class="checkmark"><div class="check-checked"></div></span>Alquilar</label>
+            </div>
         </div>
-        <div class="Filter-container">
-            <span class="Filter-container-title">Precio: </span>
-            ${makeButtons(prices, "price")}<br>
-        </div>
-        <div class="Filter-container">
-            <span class="Filter-container-title">Superficie: </span>
-            ${makeButtons(surfaces, "surface")}<br>
-        </div>
-        <div class="Filter-container">
-            <span class="Filter-container-title">Habitaciones: </span>
-            ${makeButtons(rooms, "room")}<br>
-        </div>
-        <div class="Filter-container">
-            <span class="Filter-container-title">Baños: </span>
-            ${makeButtons(toilets, "toilet")}<br>
-        </div>
-        <div class="Filter-container">
-            <span class="Filter-container-title">Tipo: </span>
-            ${makeButtons(types, "type")}<br>
-        </div>
-        <div class="Filter-container">
-            <span class="Filter-container-title">Subtipo: </span>
-            ${makeButtons(subtypes, "subtype")}<br>
-        </div>
-        <div class="Filter-container">
-            <span class="Filter-container-title">Zona: </span>
-            ${makeButtons(zones, "zone")}<br>
+        <button type="button" class="show-filter-button" id="show-filter-button">+ Filtros</button>
+        <div class="Home-filter" id="Home-filter-menu">
+            <div class="Filter-container">
+                <span class="Filter-container-title">Habitaciones: </span>
+                ${makeButtons(rooms, "room")}
+            </div>
+            <div class="Filter-container">
+                <span class="Filter-container-title">Baños: </span>
+                ${makeButtons(toilets, "toilet")}
+            </div>
+            <div class="Filter-container">
+                <span class="Filter-container-title">Tipo: </span>
+                ${makeButtons(types, "type")}
+            </div>
+            <div class="Filter-container">
+                <span class="Filter-container-title">Subtipo: </span>
+                ${makeButtons(subtypes, "subtype")}
+            </div>
+            <div class="Filter-container">
+                <span class="Filter-container-title">Zona: </span>
+                ${makeButtons(zones, "zone")}
+            </div>
         </div>
     `;
 
+    // <div class="Filter-container">
+    //     <span class="Filter-container-title">Precio: </span>
+    //     ${makeButtons(prices, "price")}<br>
+    // </div>
+    // <div class="Filter-container">
+    //     <span class="Filter-container-title">Superficie: </span>
+    //     ${makeButtons(surfaces, "surface")}<br>
+    // </div>
     // <span>Características: </span>
     // ${makeButtons(characteristics, "characteristic")}
     

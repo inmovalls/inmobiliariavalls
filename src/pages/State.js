@@ -46,6 +46,7 @@ const State = async () => {
     //resto de valores, desestructurados
 
     const {
+        referencia,
         caracteristicas,
         definicion,
         fecha_publicacion,
@@ -89,7 +90,7 @@ const State = async () => {
 
     const view = `
         <div class="State-page">
-            <h2>Título: ${titulo}</h2>
+            <h2>${titulo}</h2>
             ${Carousel(images)}
             <div class="State-page-info" id="State-page-info-1">
                 <p>
@@ -101,13 +102,13 @@ const State = async () => {
                     ${nombre_zona}<br>
                 </p>
                 <p>
-                    ${precio}<br>
-                    ${superficie}
+                    ${precio} €<br>
+                    ${superficie} m²
                 </p>
                 <p>
                     ${habitaciones} Habitaciones y ${banos} Baños
                 </p>
-                <p>Publicado ${day} ${month} ${year}</p>
+                <p>Referencia: ${referencia}</p>
             </div>
             <div class="State-page-info" id="State-page-info-3">
                 <p><b>Descripción:</b></p>

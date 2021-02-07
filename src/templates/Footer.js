@@ -16,10 +16,8 @@ const Header = () => {
         <div class="Footer-info-container">
             <h4>HORARIO</h4>
             <p class="Footer-info">
-                Lunes, Miercoles y Viernes <br>
-                De 8 a 15 Hs <br>
-                Martes y Jueves <br>
-                De 8 a 20 Hs <br>
+                Lunes a Viernes <br>
+                De 8 a 16 Hs <br>
             </p>
         </div>
     </div>
