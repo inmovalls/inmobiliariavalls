@@ -26,7 +26,7 @@ const StateItem = async (id) => {
                     <span>${state.superficie} m²</span>
                 </p>
                 <span>${state.habitaciones} habitaciones</span>
-                <span>${state.zona.nombre_zona}</span>
+                <span>${state.zona.nombre_zona}, ${state.localizacion}</span>
                 <span>Ref: ${state.referencia}</span>
             </div>
         </a>

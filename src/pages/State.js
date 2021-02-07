@@ -99,7 +99,7 @@ const State = async () => {
                     para ${tipo_operacion}
                 </p>
                 <p>
-                    ${nombre_zona}<br>
+                    ${nombre_zona}, ${localizacion}<br>
                 </p>
                 <p>
                     ${precio} €<br>
