@@ -1,4 +1,4 @@
-const DOMAIN = 'https://backend-inmovalls.herokuapp.com/'
+const DOMAIN = 'https://inmovalls-admin.herokuapp.com/'
 
 //API characteristics
 const API = {

@@ -15,7 +15,7 @@ const ContactBox = async () => {
         <div class="Contact-container">
             <h3>Contáctanos</h3><hr>
             <div class="Contact-container-content">
-                <h4>${pageData.nombre_departamento}</h4>
+                <h4>${pageData.nombre_departamente}</h4>
                 <span>${pageData.telefono}</span>
                 <span>${pageData.telefono2}</span>
                 <a href='mailto:${pageData.email}'>${pageData.email}</a>

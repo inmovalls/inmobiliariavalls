@@ -6,7 +6,7 @@ const Map = async () => {
 
     const view = `
         <div id="map">
-            ${state.maps_url}
+            ${state.mapa_url}
         </div>
     `;
     return view

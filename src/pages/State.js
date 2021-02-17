@@ -10,49 +10,19 @@ const State = async () => {
     const id = getStateHash()
     const state = await getDataState(id)
 
-    const images_url = [
-        state.imagen_url_1,
-        state.imagen_url_2,
-        state.imagen_url_3,
-        state.imagen_url_4,
-        state.imagen_url_5,
-        state.imagen_url_6,
-        state.imagen_url_7,
-        state.imagen_url_8,
-        state.imagen_url_9,
-        state.imagen_url_10,
-        state.imagen_url_11,
-        state.imagen_url_12,
-        state.imagen_url_13,
-        state.imagen_url_14,
-        state.imagen_url_15,
-        state.imagen_url_16,
-        state.imagen_url_17,
-        state.imagen_url_18,
-        state.imagen_url_19,
-        state.imagen_url_20,
-    ]
-
-    //clean null values in images
-
-    let images = []
-
-    for (let i = 0; i < images_url.length; i++) {
-        if (images_url[i]) {
-            images.push(images_url[i])
-        }
-    }
+    // Regex para conseguir las urls del texto y dejarlas en una lista
+    const exp = /https?:\/\/[\w\-\.]+\.\w{2,6}\/?\S*/gi
+    const imgUrls = state.imagenes_url.match(exp)
 
     //resto de valores, desestructurados
 
     const {
         referencia,
         caracteristicas,
-        definicion,
+        descripcion,
         fecha_publicacion,
         habitaciones,
         banos,
-        localizacion,
         operacion: {
             tipo_operacion
         },
@@ -67,6 +37,9 @@ const State = async () => {
         zona: {
             nombre_zona
         },
+        subzona: {
+            nombre_subzona
+        },
         titulo
     } = state
 
@@ -80,18 +53,13 @@ const State = async () => {
         }
     }
 
-    const tiempo = fecha_publicacion.split("T")
-    const fecha = tiempo[0].split("-")
-    const day = fecha[2]
-    const month = fecha[1]
-    const year = fecha[0]
-
     //desplegamos
+
 
     const view = `
         <div class="State-page">
             <h2>${titulo}</h2>
-            ${Carousel(images)}
+            ${Carousel(imgUrls)}
             <div class="State-page-info" id="State-page-info-1">
                 <p>
                     ${nombre_tipo_inmueble}
@@ -99,11 +67,11 @@ const State = async () => {
                     para ${tipo_operacion}
                 </p>
                 <p>
-                    ${nombre_zona}, ${localizacion}<br>
+                    ${nombre_zona}, ${nombre_subzona}<br>
                 </p>
                 <p>
-                    ${precio} €<br>
-                    ${superficie} m²
+                    ${precio.toLocaleString()} €<br>
+                    ${superficie.toLocaleString()} m²
                 </p>
                 <p>
                     ${habitaciones} Habitaciones y ${banos} Baños
@@ -112,7 +80,7 @@ const State = async () => {
             </div>
             <div class="State-page-info" id="State-page-info-3">
                 <p><b>Descripción:</b></p>
-                <p>${definicion}</p>
+                <p>${descripcion}</p>
             </div>
             <div id="info2-contact">
                 <div class="State-page-info" id="State-page-info-2">

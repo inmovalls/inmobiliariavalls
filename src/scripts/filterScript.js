@@ -83,7 +83,9 @@ const filterScript = async () => {
                 checkStatus(i)
             }
         }
-    } 
+    }
+
+    checkAll() //cuando inicializamos se aplica el filtra para que en inicio se vea el home
     
     // todos los botones de addEventListeners
     for (let i = 0; i < checkboxes.length; i++) {

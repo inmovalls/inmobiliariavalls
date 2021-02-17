@@ -63,30 +63,30 @@ const Filter = async () => {
     zones = Array.from(zones)
     characteristics = Array.from(characteristics)
 
-    //Integers
-    let pricesInt = []
-    for (let i = 0; i < prices.length; i++) {
-        pricesInt[i] = parseInt(prices[i].replace(/\D/g, ''))
-    }
-    pricesInt = pricesInt.sort(function(a, b){return a-b})
+    //Integers---------------------------------------
+    // let pricesInt = []
+    // for (let i = 0; i < prices.length; i++) {
+    //     pricesInt[i] = parseInt(prices[i].replace(/\D/g, ''))
+    // }
+    // pricesInt = pricesInt.sort(function(a, b){return a-b})
 
-    let surfacesInt = []
-    for (let i = 0; i < surfaces.length; i++) {
-        surfacesInt[i] = parseInt(surfaces[i].replace(/\D/g, '').replace(/2$/g, ''))
-    }
+    // let surfacesInt = []
+    // for (let i = 0; i < surfaces.length; i++) {
+    //     surfacesInt[i] = parseInt(surfaces[i].replace(/\D/g, '').replace(/2$/g, ''))
+    // }
 
-    surfacesInt = surfacesInt.sort(function(a, b){return a-b})
-    let roomsInt = []
-    for (let i = 0; i < rooms.length; i++) {
-        roomsInt[i] = parseInt(rooms[i].replace(/\D/g, ''))
-    }
-    roomsInt = roomsInt.sort(function(a, b){return a-b})
+    // surfacesInt = surfacesInt.sort(function(a, b){return a-b})
+    // let roomsInt = []
+    // for (let i = 0; i < rooms.length; i++) {
+    //     roomsInt[i] = parseInt(rooms[i].replace(/\D/g, ''))
+    // }
+    // roomsInt = roomsInt.sort(function(a, b){return a-b})
 
-    let toiletsInt = []
-    for (let i = 0; i < toilets.length; i++) {
-        toiletsInt[i] = parseInt(toilets[i].replace(/\D/g, ''))
-    }
-    toiletsInt = toiletsInt.sort(function(a, b){return a-b})
+    // let toiletsInt = []
+    // for (let i = 0; i < toilets.length; i++) {
+    //     toiletsInt[i] = parseInt(toilets[i].replace(/\D/g, ''))
+    // }
+    // toiletsInt = toiletsInt.sort(function(a, b){return a-b})
 
     const view = `
         <div class="Filter-container" id="Filter-container-operacion">
@@ -95,7 +95,7 @@ const Filter = async () => {
             <label class="Filter-operation Filter-button-container"><input type="checkbox" class="Filter-button Filter-button-operation" id="operation-0"><span class="checkmark"><div class="check-checked"></div></span>Alquilar</label>
             </div>
         </div>
-        <button type="button" class="show-filter-button" id="show-filter-button">+ Filtros</button>
+        <button type="button" class="show-filter-button" id="show-filter-button">Filtros</button>
         <div class="Home-filter" id="Home-filter-menu">
             <div class="Filter-container">
                 <span class="Filter-container-title">Habitaciones: </span>

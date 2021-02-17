@@ -10,7 +10,7 @@ const StateMultiples = async() => {
     for (let i=0; i < count; i++) {
         if (states[i].disponible) {
             let v = `
-            ${await StateItem(i+1)}
+            ${await StateItem(states[i].id)}
             `;
             view += v
         }

@@ -1,28 +1,30 @@
 import getDataDepartment from './getDataDepartment'
 import getHash from './getHash'
 
-//1-about 2-admin finc 3-gestion alq 4-jurid 5-seguros 6-inmobil
+//0-about 1-admin finc 2-gestion alq 3-jurid 4-seguros 5-inmobil
 
 const getDepartment = async () => {
+    const departments = await getDataDepartment()
+
     let data = ''
     switch (getHash()[1]) {
         case 'about':
-            data = await getDataDepartment(1)
+            data = await getDataDepartment(departments[0].id)
             break
         case 'administracion_fincas':
-            data = await getDataDepartment(2)
+            data = await getDataDepartment(departments[1].id)
             break
         case 'gestion_alquileres':
-            data = await getDataDepartment(3)
+            data = await getDataDepartment(departments[2].id)
             break
         case 'departamento_juridico':
-            data = await getDataDepartment(4)
+            data = await getDataDepartment(departments[3].id)
             break
         case 'correduria_seguros':
-            data = await getDataDepartment(5)
+            data = await getDataDepartment(departments[4].id)
             break
         default:
-            data = await getDataDepartment(6)
+            data = await getDataDepartment(departments[5].id)
             // console.log("Te di los datos de la inmobiliaria")
             break
     }

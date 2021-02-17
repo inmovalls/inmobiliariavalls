@@ -9,11 +9,15 @@ const StateItem = async (id) => {
         listaCaracteristicas += caracteristicas[i].nombre_caracteristica + ' '
     }
 
+    // Regex para conseguir las urls del texto y dejarlas en una lista
+    const exp = /https?:\/\/[\w\-\.]+\.\w{2,6}\/?\S*/gi
+    const imgUrls = state.imagenes_url.match(exp)
+
     const view = `
         <a href="#/inmueble/${state.id}" id="container-${state.id}" class="StateItem-container">
             <h3>${state.titulo}</h3>
             <figure class="StateItem-image">
-                <img src="${state.imagen_url_1}" alt="Inmueble">
+                <img src="${imgUrls[0]}" alt="Inmueble">
             </figure>
             <div class="StateItem-properties">
                 <p>
@@ -21,12 +25,12 @@ const StateItem = async (id) => {
                     para <span>${state.operacion.tipo_operacion}</span>
                 </p>
                 <p>
-                    <span>${state.precio} €</span>
+                    <span>${state.precio.toLocaleString()} €</span>
                     &nbsp;
-                    <span>${state.superficie} m²</span>
+                    <span>${state.superficie.toLocaleString()} m²</span>
                 </p>
                 <span>${state.habitaciones} habitaciones</span>
-                <span>${state.zona.nombre_zona}, ${state.localizacion}</span>
+                <span>${state.zona.nombre_zona}, ${state.subzona.nombre_subzona}</span>
                 <span>Ref: ${state.referencia}</span>
             </div>
         </a>
