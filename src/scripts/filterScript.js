@@ -56,13 +56,13 @@ const filterScript = async () => {
         let suma = (
             filterProp(states[index].id, states[index].operacion.tipo_operacion, operationBox, operationButton)
             +
-            filterProp(states[index].id, states[index].precio, priceBox, priceButton)
+            filterProp(states[index].id, states[index].precio.toString(), priceBox, priceButton)
             +
-            filterProp(states[index].id, states[index].superficie, surfaceBox, surfaceButton)
+            filterProp(states[index].id, states[index].superficie.toString(), surfaceBox, surfaceButton)
             +
-            filterProp(states[index].id, states[index].habitaciones, roomBox, roomButton)
+            filterProp(states[index].id, states[index].habitaciones.toString(), roomBox, roomButton)
             +
-            filterProp(states[index].id, states[index].banos, toiletBox, toiletButton)
+            filterProp(states[index].id, states[index].banos.toString(), toiletBox, toiletButton)
             +
             filterProp(states[index].id, states[index].tipo_inmueble.nombre_tipo_inmueble, typeBox, typeButton)
             +
@@ -85,7 +85,7 @@ const filterScript = async () => {
         }
     }
 
-    checkAll() //cuando inicializamos se aplica el filtra para que en inicio se vea el home
+    checkAll() //cuando inicializamos se aplica el filtro para que en inicio se vea el home
     
     // todos los botones de addEventListeners
     for (let i = 0; i < checkboxes.length; i++) {

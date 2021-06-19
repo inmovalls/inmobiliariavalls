@@ -74,8 +74,8 @@ const Filter = async () => {
     // for (let i = 0; i < surfaces.length; i++) {
     //     surfacesInt[i] = parseInt(surfaces[i].replace(/\D/g, '').replace(/2$/g, ''))
     // }
-
     // surfacesInt = surfacesInt.sort(function(a, b){return a-b})
+
     // let roomsInt = []
     // for (let i = 0; i < rooms.length; i++) {
     //     roomsInt[i] = parseInt(rooms[i].replace(/\D/g, ''))
